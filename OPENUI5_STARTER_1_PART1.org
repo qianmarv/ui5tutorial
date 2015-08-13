@@ -12,7 +12,7 @@
     周的时间，所以SAP入门的第一步就是学会使用SAP GUI。此外，传统的SAP GUI只能在Windows和Mac上使用，对于移动端用户没有直接的解决方案，WEBGUI的体验也非常不好。
     #+CAPTION: SAP GUI创建销售订单的界面
     #+NAME: fig:sapgui_va01
-    [[http://7xkxdl.com1.z0.glb.clouddn.com/sapgui_va01.png][starter_1_1]]
+    [[./images/sapgui_va01.png][starter_1_1]]
 
     鉴于此，SAP开发了一整套新的用户交互系统（UX)，叫做SAP Fiori。SAP Fiori的官方定义如下:
 
