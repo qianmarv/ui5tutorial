@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> -->
+
+    <meta charset="UTF-8">
+
+    <title>SAPUI5 Best Practice</title>
+
+    <script 
+    id="sap-ui-bootstrap"
+    src="http://localhost:8080/openui5/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_bluecrystal"
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-xx-bindingSyntax="complex"
+    data-sap-ui-resourceroots='{
+        "ui5.tutorial.bp": "./"
+    }' >
+    </script>
+
+    <script>
+    var oView = sap.ui.view({
+        id : "app",
+        viewName : "ui5.tutorial.bp.view.App",
+        type : "JS",
+    });
+    // Using a local model for offline development
+    var oModel = new sap.ui.model.json.JSONModel("model/mock.json");
+    oView.setModel(oModel);
+    
+    oView.placeAt('content');
+    </script>
+</head>
+<body class="sapUiBody">
+
+    <!-- This is where you place the UI5 button -->
+    <div id="content"></div>
+</body>
