@@ -1,6 +1,6 @@
-#+TITLE: OPEN(SAP) UI5 学习入门系列之二： 最佳实践练习之一
+#+TITLE: OPEN(SAP) UI5 学习入门系列之二： 最佳实践练习（上）
 #+AUTHOR: QIANMARV
-#+DATE: 2015-08-06
+#+DATE: 2015-08-13
 #+OPTIONS: toc:nil style-include-scripts:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/qianmarv.css" />
 
