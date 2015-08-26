@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8">
+
+	<title>My Fiori 10</title>
+
+	<script
+id="sap-ui-bootstrap"
+src="http://localhost:8080/resources/sap-ui-core.js"
+data-sap-ui-theme="sap_bluecrystal"
+data-sap-ui-libs="sap.m, sap.ui.layout"
+data-sap-ui-xx-bindingSyntax="complex"
+data-sap-ui-resourceroots='{
+			   "ui5.tutorial.bp": "./"
+			   }' >
+	</script>
+
+	<script>
+         var oView = sap.ui.view({
+             id : "app",
+             viewName : "ui5.tutorial.bp.view.App",
+             type : "JS",
+         });
+         
+         // Using a local model for offline development
+         var oModel = new sap.ui.model.json.JSONModel("model/mock.json");
+         oView.setModel(oModel);
+
+	 // set i18n model
+	 var i18nModel = new sap.ui.model.resource.ResourceModel({
+	     bundleUrl : "i18n/messageBundle.properties"
+	 });
+	 oView.setModel(i18nModel, "i18n");
+
+	 // set device model
+	 var deviceModel = new sap.ui.model.json.JSONModel({
+	     isPhone : jQuery.device.is.phone,
+	     listMode : (jQuery.device.is.phone) ? "None" : "SingleSelectMaster",
+	     listItemType : (jQuery.device.is.phone) ? "Active" : "Inactive"
+	 });
+	 deviceModel.setDefaultBindingMode("OneWay");
+	 oView.setModel(deviceModel, "device");         
+         
+         oView.placeAt('content');
+	</script>
+
+    </head>
+    <body class="sapUiBody" id="content">
+    </body>
+</html>
